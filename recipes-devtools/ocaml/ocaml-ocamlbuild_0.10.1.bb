@@ -27,5 +27,5 @@ do_compile() {
 }
 
 do_install() {
-	oe_runmake install
+	oe_runmake CHECK_IF_PREINSTALLED=false install
 }
