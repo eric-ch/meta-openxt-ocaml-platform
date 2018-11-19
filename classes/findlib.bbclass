@@ -15,7 +15,6 @@ FILES_${PN} = " \
     ${sbindir}/* \
 "
 FILES_${PN}-dev = " \
-    ${sitelibdir}/*/*.cm* \
     ${sitelibdir}/*/*.mli \
     ${sitelibdir}/*/META \
 "
@@ -23,6 +22,7 @@ FILES_${PN}-staticdev = " \
     ${sitelibdir}/*/*.a \
 "
 FILES_${PN}-dbg = " \
+    ${sitelibdir}/*/*.cm* \
     ${sitelibdir}/*/.debug \
     ${bindir}/.debug \
     ${sbindir}/.debug \
