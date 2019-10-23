@@ -1,0 +1,17 @@
+--- a/Makefile
++++ b/Makefile
+@@ -64,12 +64,12 @@ check:
+ 
+ .PHONY: install
+ install: $(LIBS)
+-	ocamlfind install -destdir $(OCAMLDESTDIR) -ldconf ignore $(OCAML_PKG_NAME) META $(INTERFACES) $(LIBS) *.a *.so *.cmx
++	ocamlfind install -destdir $(OCAMLDESTDIR) -ldconf ignore $(OCAML_PKG_NAME) META $(INTERFACES) $(LIBS) *.a *.cmx
+ 
+ install-opt: install
+ 
+ install-byte: all-byte
+-	ocamlfind install -destdir $(OCAMLDESTDIR) -ldconf ignore $(OCAML_PKG_NAME) META $(INTERFACES) $(LIBS_BYTE) *.a *.so
++	ocamlfind install -destdir $(OCAMLDESTDIR) -ldconf ignore $(OCAML_PKG_NAME) META $(INTERFACES) $(LIBS_BYTE) *.a
+ 
+ uninstall:
+ 	ocamlfind remove -destdir $(OCAMLDESTDIR) $(OCAML_PKG_NAME)
